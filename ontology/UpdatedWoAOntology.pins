@@ -1,4 +1,4 @@
-; Fri Apr 20 19:10:40 CEST 2018
+; Thu Apr 26 01:18:26 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -15,6 +15,10 @@
 
 	(%3AJADE-IGNORE TRUE))
 
+([Allocate] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
 ([Concept] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE TRUE))
@@ -23,20 +27,28 @@
 
 	(%3AJADE-UNNAMED-SLOT FALSE))
 
+([Position] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
 ([Predicate] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE TRUE))
 
 ([project+annotation] of  %3APROJECT-ANNOTATION
 
-	(%3ALOCATION "/Users/ducaohui/Desktop/AgentBasedSoftwareEngineering")
-	(%3AONTOLOGYNAME "WoaSonny")
-	(%3APACKAGE "new.test")
+	(%3ALOCATION "C:\\Users\\Omar\\Documents\\UPM\\Semester 1\\Agent Based Engineering\\Second_ontology")
+	(%3AONTOLOGYNAME "WoA")
+	(%3APACKAGE "org.woa")
 	(%3ASUPPORT "j2se"))
 
 ([resolvers] of  %3AJADE-SLOT
 
 	(%3AJADE-UNNAMED-SLOT FALSE))
+
+([Resource] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
 
 ([SimpleJADEAbstractOntology_00014] of  %3ASTANDARD-FACET
 
@@ -51,5 +63,9 @@
 	(%3AJADE-IGNORE FALSE))
 
 ([TribeRegistration] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
+([Unit] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE FALSE))

@@ -1,4 +1,4 @@
-; Fri Apr 20 19:10:40 CEST 2018
+; Thu Apr 26 01:18:26 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -19,6 +19,16 @@
 ;+		(comment "packagename")
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot initial_resources
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot unit_id
+		(type SYMBOL)
+;+		(allowed-parents AID)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-GENERATE-BEANS
 		(type SYMBOL)
@@ -45,6 +55,19 @@
 ;+		(cardinality 1 1)
 ;+		(associated-facet SimpleJADEAbstractOntology_00016)
 		(create-accessor read-write))
+	(single-slot y
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot x
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unit_owner
+		(type SYMBOL)
+;+		(allowed-parents Tribe)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot %3AJADE-JAVA-CODE
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -59,11 +82,20 @@
 		(type INSTANCE)
 ;+		(allowed-classes)
 		(create-accessor read-write))
+	(single-slot position
+		(type SYMBOL)
+;+		(allowed-parents Position)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-PACKAGE
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot ID
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot amount
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -79,6 +111,16 @@
 		(create-accessor read-write))
 	(multislot addresses
 		(type STRING)
+		(create-accessor read-write))
+	(single-slot type
+		(type STRING)
+;+		(value "gold" "stone" "wood" "food")
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot initial_units
+		(type SYMBOL)
+;+		(allowed-parents Unit)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot %3AJADE-JAVA-BASE-CLASS
 		(type STRING)
@@ -198,6 +240,20 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
+(defclass Allocate
+	(is-a AgentAction)
+	(role concrete)
+	(multislot initial_resources
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot initial_units
+		(type SYMBOL)
+;+		(allowed-parents Unit)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
 (defclass Tribe
 	(is-a Concept)
 	(role concrete)
@@ -207,6 +263,50 @@
 		(create-accessor read-write))
 	(single-slot Name
 		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Position
+	(is-a Concept)
+	(role concrete)
+	(single-slot y
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot x
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Unit
+	(is-a Concept)
+	(role concrete)
+	(single-slot unit_owner
+		(type SYMBOL)
+;+		(allowed-parents Tribe)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unit_id
+		(type SYMBOL)
+;+		(allowed-parents AID)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot position
+		(type SYMBOL)
+;+		(allowed-parents Position)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Resource
+	(is-a Concept)
+	(role concrete)
+	(single-slot amount
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot type
+		(type STRING)
+;+		(value "gold" "stone" "wood" "food")
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
