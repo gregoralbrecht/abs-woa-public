@@ -1,4 +1,4 @@
-; Thu Apr 26 01:18:26 CEST 2018
+; Sat Apr 28 18:40:13 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,14 +20,9 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot initial_resources
+	(single-slot unitOwner
 		(type SYMBOL)
-;+		(allowed-parents Resource)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot unit_id
-		(type SYMBOL)
-;+		(allowed-parents AID)
+;+		(allowed-parents Tribe)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-GENERATE-BEANS
@@ -63,11 +58,6 @@
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot unit_owner
-		(type SYMBOL)
-;+		(allowed-parents Tribe)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot %3AJADE-JAVA-CODE
 		(type STRING)
 ;+		(cardinality 0 1)
@@ -81,6 +71,11 @@
 	(multislot %3AJADE-INCLUDED-PROPERTIES
 		(type INSTANCE)
 ;+		(allowed-classes)
+		(create-accessor read-write))
+	(multislot initialResources
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot position
 		(type SYMBOL)
@@ -109,6 +104,11 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot unitID
+		(type SYMBOL)
+;+		(allowed-parents AID)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(multislot addresses
 		(type STRING)
 		(create-accessor read-write))
@@ -116,11 +116,6 @@
 		(type STRING)
 ;+		(value "gold" "stone" "wood" "food")
 ;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(multislot initial_units
-		(type SYMBOL)
-;+		(allowed-parents Unit)
-		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot %3AJADE-JAVA-BASE-CLASS
 		(type STRING)
@@ -144,6 +139,11 @@
 ;+		(comment "name of the ontology")
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot initialUnits
+		(type SYMBOL)
+;+		(allowed-parents Unit)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot %3AJADE-NAME
 		(type STRING)
@@ -243,14 +243,14 @@
 (defclass Allocate
 	(is-a AgentAction)
 	(role concrete)
-	(multislot initial_resources
-		(type SYMBOL)
-;+		(allowed-parents Resource)
-		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(multislot initial_units
+	(multislot initialUnits
 		(type SYMBOL)
 ;+		(allowed-parents Unit)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(multislot initialResources
+		(type SYMBOL)
+;+		(allowed-parents Resource)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
@@ -281,19 +281,19 @@
 (defclass Unit
 	(is-a Concept)
 	(role concrete)
-	(single-slot unit_owner
+	(single-slot unitOwner
 		(type SYMBOL)
 ;+		(allowed-parents Tribe)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot unit_id
-		(type SYMBOL)
-;+		(allowed-parents AID)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unitID
+		(type SYMBOL)
+;+		(allowed-parents AID)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
