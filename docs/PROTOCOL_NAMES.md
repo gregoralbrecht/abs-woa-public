@@ -7,4 +7,10 @@
 
 ## 3. Unit requesting the creation of a new unit to the platform
    **Name:** requestCreateUnit
+
+## 4. Entity manager agrees to subscription request from Tribe/Unit
+   **Name:** agreeSubscription
+
+## 5. Entity manager refuses to subscription request from Tribe/Unit
+   **Name:** refuseSubscription
    
