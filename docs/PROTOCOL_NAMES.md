@@ -13,4 +13,7 @@
 
 ## 5. Entity manager refuses to subscription request from Tribe/Unit
    **Name:** refuseSubscription
+
+## 6. Entity manager inform  subscribers
+   **Name:** informUpdate
    
