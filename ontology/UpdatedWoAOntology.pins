@@ -1,4 +1,4 @@
-; Sat Apr 28 18:40:14 CEST 2018
+; Sun May 13 16:19:32 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -23,6 +23,14 @@
 
 	(%3AJADE-IGNORE TRUE))
 
+([CreateUnit] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
+([KillYourself] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
 ([name] of  %3AJADE-SLOT
 
 	(%3AJADE-UNNAMED-SLOT FALSE))
@@ -37,10 +45,14 @@
 
 ([project+annotation] of  %3APROJECT-ANNOTATION
 
-	(%3ALOCATION "C:\\Users\\Omar\\Documents\\UPM\\Semester 1\\Agent Based Engineering\\Second_ontology")
+	(%3ALOCATION "/Users/ducaohui/Desktop/ONTO")
 	(%3AONTOLOGYNAME "WoA")
 	(%3APACKAGE "org.woa")
 	(%3ASUPPORT "j2se"))
+
+([Reason] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
 
 ([resolvers] of  %3AJADE-SLOT
 

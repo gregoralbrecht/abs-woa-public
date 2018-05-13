@@ -1,4 +1,4 @@
-; Sat Apr 28 18:40:13 CEST 2018
+; Sun May 13 16:19:32 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -92,6 +92,12 @@
 		(create-accessor read-write))
 	(single-slot amount
 		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Description
+		(type SYMBOL)
+		(allowed-values LOCATION RESOURCES)
+;+		(value LOCATION RESOURCES)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-GENERATE-ONTOLOGY
@@ -254,6 +260,14 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
+(defclass CreateUnit
+	(is-a AgentAction)
+	(role concrete))
+
+(defclass KillYourself
+	(is-a AgentAction)
+	(role concrete))
+
 (defclass Tribe
 	(is-a Concept)
 	(role concrete)
@@ -307,6 +321,16 @@
 	(single-slot type
 		(type STRING)
 ;+		(value "gold" "stone" "wood" "food")
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Reason
+	(is-a Concept)
+	(role concrete)
+	(single-slot Description
+		(type SYMBOL)
+		(allowed-values LOCATION RESOURCES)
+;+		(value LOCATION RESOURCES)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
