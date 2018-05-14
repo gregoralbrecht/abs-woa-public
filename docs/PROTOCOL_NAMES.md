@@ -18,4 +18,22 @@
 
 ## 7. Entity manager inform  subscribers
    **Name:** `informUpdate`
+   
+## 8. Platform refuses registration
+   **Name:** `refuseRegistration`
+   
+## 9. Platform agrees registration
+   **Name:** `agreeRegistration`
+  
+## 10. Platform informs kill unit
+   **Name:** `killUnit`
+ 
+## 11. Platform refuses to create unit
+   **Name:** `refuseCreateUnit`
+  
+## 12. Platform agrees to create unit
+   **Name:** `agreeCreateUnit`
+   
+## 13. Platform informs create unit
+   **Name:** `informUnitCreation`
   
