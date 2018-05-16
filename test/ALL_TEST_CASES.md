@@ -27,3 +27,14 @@
 
 **Expected Result:** Entity Manager agrees and sends informs to the unit/tribe.
 
+## 4. Movement (16.05.2018)
+### 4.1. Unit Move
+
+**Test:** Unit request to move to an allowed position.
+**Expected Result:** 	The movement is accepted and an Inform is sent.
+
+**Test:** Unit request to move to an non allowed position.
+**Expected Result:** 	The movement is refused.
+
+**Test:** Unit succesfully move to a new position.
+**Expected Result:** 	The entity manager sends an Inform to the unit with: Units Present and Position.
