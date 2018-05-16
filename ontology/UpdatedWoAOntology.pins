@@ -1,4 +1,4 @@
-; Sun May 13 16:19:32 CEST 2018
+; Tue May 15 17:23:24 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -45,9 +45,9 @@
 
 ([project+annotation] of  %3APROJECT-ANNOTATION
 
-	(%3ALOCATION "/Users/ducaohui/Desktop/ONTO")
+	(%3ALOCATION "C:\\Users\\Omar\\Documents\\UPM\\Semester 1\\Agent Based Engineering\\Third ontology")
 	(%3AONTOLOGYNAME "WoA")
-	(%3APACKAGE "org.woa")
+	(%3APACKAGE "WoA.group2")
 	(%3ASUPPORT "j2se"))
 
 ([Reason] of  %3AJADE-CLASS
