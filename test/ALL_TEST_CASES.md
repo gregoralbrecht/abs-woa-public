@@ -35,9 +35,11 @@
 
 **Expected Result:** The movement is accepted and an Inform is sent.
 
+
 **Test:** Unit request to move to an non allowed position.
 
 **Expected Result:** The movement is refused.
+
 
 **Test:** Unit succesfully move to a new position.
 
