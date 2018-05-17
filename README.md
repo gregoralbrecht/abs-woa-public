@@ -3,3 +3,4 @@ Public repository for the class "Agent-Based Software Development" — Master in
 
 ## Documentation
 - [Test Cases](test/ALL_TEST_CASES.md)
+- [Protocol Names](docs/PROTOCOL_NAMES.md)
