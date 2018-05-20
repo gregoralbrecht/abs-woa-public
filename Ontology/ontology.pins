@@ -1,4 +1,4 @@
-; Thu May 17 12:30:32 GMT+01:00 2018
+; Sun May 20 14:33:01 GMT+01:00 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -38,10 +38,6 @@
 ([KillYourself] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE FALSE))
-
-([name] of  %3AJADE-SLOT
-
-	(%3AJADE-UNNAMED-SLOT FALSE))
 
 ([NewAgent] of  %3AJADE-CLASS
 

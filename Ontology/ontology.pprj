@@ -1,4 +1,4 @@
-; Thu May 17 12:30:32 GMT+01:00 2018
+; Sun May 20 14:33:01 GMT+01:00 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,9 +20,9 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[ontology_ProjectKB_Class88]
-		[ontology_ProjectKB_Class89]
-		[ontology_ProjectKB_Class90]))
+		[ontology_ProjectKB_Class43]
+		[ontology_ProjectKB_Class44]
+		[ontology_ProjectKB_Class45]))
 
 ([CLSES_TAB] of  Widget
 
@@ -66,9 +66,6 @@
 	(is_hidden FALSE)
 	(widget_class_name "edu.stanford.smi.protege.widget.InstancesTab"))
 
-([KB_211661_Class3] of  Map
-)
-
 ([KB_250803_Class0] of  String
 
 	(name "factory_class_name")
@@ -77,9 +74,9 @@
 ([KB_250803_Class1] of  Map
 
 	(entries
-		[ontology_ProjectKB_Class91]
-		[ontology_ProjectKB_Class92]
-		[ontology_ProjectKB_Class93]))
+		[ontology_ProjectKB_Class46]
+		[ontology_ProjectKB_Class47]
+		[ontology_ProjectKB_Class48]))
 
 ([KB_250803_Class100] of  Property_List
 
@@ -171,6 +168,9 @@
 )
 
 ([KB_250803_Class99] of  Property_List
+)
+
+([KB_260178_Class3] of  Map
 )
 
 ([KB_395962_Class100] of  Widget
@@ -798,36 +798,36 @@
 	(name "layout properties")
 	(properties [VERTICAL_STRETCHER]))
 
-([ontology_ProjectKB_Class88] of  String
+([ontology_ProjectKB_Class43] of  String
 
 	(name ":INSTANCE-ANNOTATION")
 	(string_value "%3AANNOTATION-TEXT"))
 
-([ontology_ProjectKB_Class89] of  String
+([ontology_ProjectKB_Class44] of  String
 
 	(name ":PAL-CONSTRAINT")
 	(string_value "%3APAL-NAME"))
 
-([ontology_ProjectKB_Class90] of  String
+([ontology_ProjectKB_Class45] of  String
 
 	(name ":META-CLASS")
 	(string_value "%3ANAME"))
 
-([ontology_ProjectKB_Class91] of  Map_Entry
+([ontology_ProjectKB_Class46] of  Map_Entry
 
 	(key "add_name_on_instance_form")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([ontology_ProjectKB_Class92] of  Map_Entry
+([ontology_ProjectKB_Class47] of  Map_Entry
 
 	(key "change_tracking_active")
 	(key_class "java.lang.String")
 	(value "false")
 	(value_class "java.lang.String"))
 
-([ontology_ProjectKB_Class93] of  Map_Entry
+([ontology_ProjectKB_Class48] of  Map_Entry
 
 	(key "suppress_instance_counting")
 	(key_class "java.lang.String")

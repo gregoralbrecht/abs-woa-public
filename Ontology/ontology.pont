@@ -1,4 +1,4 @@
-; Thu May 17 12:30:32 GMT+01:00 2018
+; Sun May 20 14:33:01 GMT+01:00 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -47,10 +47,6 @@
 		(type SYMBOL)
 ;+		(allowed-parents AID)
 		(create-accessor read-write))
-	(single-slot killName
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot %3ALOCATION
 ;+		(comment "The location to store files into")
 		(type STRING)
@@ -71,10 +67,6 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot x
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot unitPosition
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -100,7 +92,7 @@
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-PACKAGE
 		(type STRING)
@@ -131,20 +123,12 @@
 ;+		(allowed-parents AID)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot owner
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(multislot addresses
 		(type STRING)
 		(create-accessor read-write))
 	(single-slot type
 		(type STRING)
 ;+		(value "gold" "stone" "wood" "food")
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot unit
-		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-JAVA-BASE-CLASS
@@ -154,10 +138,6 @@
 	(single-slot %3AJADE-PROPERTIES-NAME
 		(type STRING)
 ;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-COMPATIBILITY
 		(type SYMBOL)
@@ -174,10 +154,6 @@
 		(type SYMBOL)
 ;+		(allowed-parents Unit)
 		(cardinality 1 ?VARIABLE)
-		(create-accessor read-write))
-	(single-slot killPosition
-		(type INTEGER)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-NAME
 		(type STRING)
@@ -252,10 +228,6 @@
 	(role concrete)
 	(multislot addresses
 		(type STRING)
-		(create-accessor read-write))
-	(single-slot name_
-		(type STRING)
-;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot resolvers
 		(type SYMBOL)
@@ -335,7 +307,7 @@
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot unitID
 		(type SYMBOL)
@@ -369,32 +341,36 @@
 (defclass NewAgent
 	(is-a Concept)
 	(role concrete)
-	(single-slot owner
+	(single-slot unitOwner
+		(type SYMBOL)
+;+		(allowed-parents Tribe)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unitName
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot unit
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot unitPosition
-		(type INTEGER)
+	(single-slot position
+		(type SYMBOL)
+;+		(allowed-parents Position)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass Kill
 	(is-a Concept)
 	(role concrete)
-	(single-slot number
-		(type INTEGER)
+	(single-slot unitOwner
+		(type SYMBOL)
+;+		(allowed-parents Tribe)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot killPosition
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot killName
+	(single-slot unitName
 		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot position
+		(type SYMBOL)
+;+		(allowed-parents Position)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -408,7 +384,7 @@
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Predicate "The common ancestor for all predicates in an ontology (e.g. FatherOf...)"
