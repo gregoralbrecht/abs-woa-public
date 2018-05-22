@@ -1,4 +1,4 @@
-; Sun May 20 14:33:01 GMT+01:00 2018
+; Tue May 22 18:35:06 GMT+01:00 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -26,10 +26,6 @@
 ([Concept] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE TRUE))
-
-([CreateUnit] of  %3AJADE-CLASS
-
-	(%3AJADE-IGNORE FALSE))
 
 ([Kill] of  %3AJADE-CLASS
 

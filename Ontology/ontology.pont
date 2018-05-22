@@ -1,4 +1,4 @@
-; Sun May 20 14:33:01 GMT+01:00 2018
+; Tue May 22 18:35:06 GMT+01:00 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -260,10 +260,6 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
-(defclass CreateUnit
-	(is-a AgentAction)
-	(role concrete))
-
 (defclass KillYourself
 	(is-a AgentAction)
 	(role concrete))
@@ -338,22 +334,17 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass NewAgent
+(defclass Cell
 	(is-a Concept)
 	(role concrete)
-	(single-slot unitOwner
+	(multislot units
 		(type SYMBOL)
-;+		(allowed-parents Tribe)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot unitName
-		(type STRING)
-;+		(cardinality 1 1)
+;+		(allowed-parents Unit)
 		(create-accessor read-write))
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
-;+		(cardinality 1 1)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
 (defclass Kill
@@ -374,17 +365,22 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Cell
+(defclass NewAgent
 	(is-a Concept)
 	(role concrete)
-	(multislot units
+	(single-slot unitOwner
 		(type SYMBOL)
-;+		(allowed-parents Unit)
+;+		(allowed-parents Tribe)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot unitName
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
-;+		(cardinality 0 1)
+;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass Predicate "The common ancestor for all predicates in an ontology (e.g. FatherOf...)"
