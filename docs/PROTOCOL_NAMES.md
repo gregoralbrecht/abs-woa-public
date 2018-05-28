@@ -17,8 +17,8 @@
 ## 6. Platform tells unit to kill itself
    **Name:** `killUnit`
  
-## 7. Unit requests to create another unit and Platform responds
-   **Name:** `createUnit`
+## 7. Platform requests tribe to create a unit
+   **Name:** `tribeCreatesUnit`
   
 ## 8. Unit requests to move and Platform responds
    **Name:** `move`
