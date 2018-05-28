@@ -1,4 +1,4 @@
-; Tue May 22 18:35:06 GMT+01:00 2018
+; Tue May 29 00:36:55 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -23,6 +23,15 @@
 ;+		(comment "packagename")
 		(type STRING)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot building
+		(type SYMBOL)
+;+		(allowed-parents Building)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot buildingType
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot number
 		(type INTEGER)
@@ -80,18 +89,23 @@
 		(default FALSE)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(multislot %3AJADE-INCLUDED-PROPERTIES
-		(type INSTANCE)
-;+		(allowed-classes)
-		(create-accessor read-write))
 	(multislot initialResources
 		(type SYMBOL)
 ;+		(allowed-parents Resource)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
+	(multislot %3AJADE-INCLUDED-PROPERTIES
+		(type INSTANCE)
+;+		(allowed-classes)
+		(create-accessor read-write))
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot gold
+		(type SYMBOL)
+;+		(allowed-parents Resource)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-PACKAGE
@@ -123,6 +137,11 @@
 ;+		(allowed-parents AID)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot owner
+		(type SYMBOL)
+;+		(allowed-parents Tribe)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(multislot addresses
 		(type STRING)
 		(create-accessor read-write))
@@ -135,8 +154,18 @@
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
+	(single-slot resource
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-NAME
 		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot stone
+		(type SYMBOL)
+;+		(allowed-parents Resource)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot %3AJADE-PROPERTIES-COMPATIBILITY
@@ -324,6 +353,20 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
+(defclass Ore
+	(is-a Resource)
+	(role concrete)
+	(single-slot stone
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot gold
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
 (defclass Reason
 	(is-a Concept)
 	(role concrete)
@@ -341,9 +384,19 @@
 		(type SYMBOL)
 ;+		(allowed-parents Unit)
 		(create-accessor read-write))
+	(single-slot resource
+		(type SYMBOL)
+;+		(allowed-parents Resource)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot building
+		(type SYMBOL)
+;+		(allowed-parents Building)
 ;+		(cardinality 0 1)
 		(create-accessor read-write)))
 
@@ -380,6 +433,19 @@
 	(single-slot position
 		(type SYMBOL)
 ;+		(allowed-parents Position)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Building
+	(is-a Concept)
+	(role concrete)
+	(single-slot owner
+		(type SYMBOL)
+;+		(allowed-parents Tribe)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot buildingType
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
