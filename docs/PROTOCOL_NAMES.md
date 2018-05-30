@@ -22,3 +22,9 @@
   
 ## 8. Unit requests to move and Platform responds
    **Name:** `move`
+   
+## 9. Unit requests to build and Platform responds
+   **Name:** `build`
+   
+## 10. Unit requests to exploit resource and Platform responds
+   **Name:** `exploitResource`

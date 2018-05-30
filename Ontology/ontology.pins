@@ -1,4 +1,4 @@
-; Tue May 22 18:35:06 GMT+01:00 2018
+; Tue May 29 00:36:55 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -16,6 +16,10 @@
 	(%3AJADE-IGNORE TRUE))
 
 ([Allocate] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
+([Building] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE FALSE))
 
@@ -39,6 +43,10 @@
 
 	(%3AJADE-IGNORE FALSE))
 
+([Ore] of  %3AJADE-CLASS
+
+	(%3AJADE-IGNORE FALSE))
+
 ([Position] of  %3AJADE-CLASS
 
 	(%3AJADE-IGNORE FALSE))
@@ -49,7 +57,7 @@
 
 ([project+annotation] of  %3APROJECT-ANNOTATION
 
-	(%3ALOCATION "/Users/lucku/Downloads/Ontology")
+	(%3ALOCATION "C:\\Users\\Omar\\Documents\\UPM\\Semester 1\\Agent Based Engineering\\Fourth ontology")
 	(%3AONTOLOGYNAME "WoA")
 	(%3APACKAGE "org.woa")
 	(%3ASUPPORT "j2se"))
